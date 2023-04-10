@@ -5,9 +5,11 @@ import com.tap.exam.exception.DataInputInvalidException;
 import lombok.Builder;
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
 @Builder
-public class Classification {
+public class Classification implements Serializable {
     private String rule;
     private int minScore;
     private int totalScore;

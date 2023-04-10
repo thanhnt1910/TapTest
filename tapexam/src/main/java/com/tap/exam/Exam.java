@@ -41,7 +41,9 @@ public class Exam {
         for (String s : examineesResult) {
             Optional<Division> division = Optional.empty();
             for (Factory e : Factory.values()) {
+                //Check data input is valid or invalid
                 if (e.getClassification().build().isValid(s)) {
+                    //Parse data corresponding to the exam division.
                     Division parse = e.parse(s);
                     division = Optional.of(parse);
                     //Get condition score by division

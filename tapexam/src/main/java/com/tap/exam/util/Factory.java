@@ -19,6 +19,7 @@ public enum Factory {
         @Override
         public Division parse(String dataInput) {
             Science science = new Science(new ScienceStrategy());
+            //Check and set exam score value
             DivisionReflection.setClassInfo(science.getClass().getName(), dataInput, science);
             return science;
         }
@@ -34,6 +35,7 @@ public enum Factory {
         @Override
         public Division parse(String dataInput) {
             Humanities humanities = new Humanities(new HumanityStrategy());
+            //Check and set exam score value
             DivisionReflection.setClassInfo(humanities.getClass().getName(), dataInput, humanities);
             return humanities;
         }
